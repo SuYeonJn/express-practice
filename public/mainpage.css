@@ -1,0 +1,198 @@
+.top_body {
+  height: 1080px;
+  background-color: gray;
+}
+.whatwedo {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #4558ff;
+}
+.main_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid rgb(245, 239, 239);
+}
+
+.purpleback {
+  width: 97%;
+}
+#pro {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 83px;
+}
+#pro2 {
+  margin-top: 80px;
+  margin-left: 83px;
+  display: none;
+  position: absolute;
+}
+
+#book {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 83px;
+}
+#book2 {
+  margin-top: 80px;
+  margin-left: 83px;
+  display: none;
+  position: absolute;
+}
+#file {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 83px;
+}
+#file2 {
+  margin-top: 80px;
+  margin-left: 83px;
+  display: none;
+  position: absolute;
+}
+.program_top_typo {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  /* or 150% */
+
+  text-align: right;
+  letter-spacing: 0.1em;
+}
+.program_bottom_typo {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 36px;
+  /* or 150% */
+
+  text-align: right;
+  letter-spacing: 0.1em;
+}
+.main_1 div {
+  margin: 50px 50px 50px 0px;
+}
+
+#apply_button {
+  width: 259px;
+  float: right;
+  text-align: center;
+  padding: 16px;
+  height: 61px;
+  background: #ffffff;
+  border: 2px solid #4558ff;
+  box-sizing: border-box;
+  border-radius: 40px;
+
+  /* Inside auto layout */
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+
+  /* maincolor_blue */
+
+  color: #4558ff;
+}
+#book_button {
+  width: 259px;
+  float: left;
+  text-align: center;
+  padding: 16px;
+  height: 61px;
+  background: #ffffff;
+  border: 2px solid #4558ff;
+  box-sizing: border-box;
+  border-radius: 40px;
+
+  /* Inside auto layout */
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+
+  /* maincolor_blue */
+
+  color: #4558ff;
+}
+
+#file_button {
+  width: 259px;
+  float: right;
+  text-align: center;
+  padding: 16px;
+  height: 61px;
+  background: #ffffff;
+  border: 2px solid #4558ff;
+  box-sizing: border-box;
+  border-radius: 40px;
+
+  /* Inside auto layout */
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+
+  /* maincolor_blue */
+
+  color: #4558ff;
+}
+.main_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid rgb(245, 239, 239);
+}
+.main_2 div {
+  margin: 50px;
+}
+.whatwe_top_typo {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  /* or 150% */
+
+  text-align: left;
+  letter-spacing: 0.1em;
+}
+.whatwe_bottom_typo {
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 36px;
+  /* or 150% */
+
+  text-align: left;
+  letter-spacing: 0.1em;
+}
+
+.main_3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main_3 div {
+  margin: 50px 50px 50px 10px;
+}

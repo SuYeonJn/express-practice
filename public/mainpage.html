@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> OUTTA </title>
+        <meta charset="utf-8">
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="mainpage.js" defer></script>
+    </head>
+    
+
+    <link rel="stylesheet" href="nav_footer.css">
+    <link rel="stylesheet" href="mainpage.css">
+    <body>  
+           
+        <header>
+            <div class="navigation_c">
+                <ul class="left_nav">
+                    <li><img src="img/Icon.png"></li>
+                    <li><a href="/mainpage"><img src="img/outta.png"></a></li>
+                </ul>
+                <ul class="center_nav">
+                    <li><a href="/whowearepage">WHO WE ARE</a></li>
+                    <li>WHAT WE DO</li>
+                    <li>NOTFICATION</li>
+                </ul>
+                <ul  class="right_nav">
+                    <li style=" border-right: 2px solid #C6C6C6; 
+                    padding-right:30px;  
+                    height: 24px;">LOGIN</li> 
+                    <li>JOIN</li>
+                </ul>
+            </div>
+            <div class = "top_body">
+            </div>
+        </header>
+       
+        <main>
+            <div class="main_1">
+                <div class="main1_left">
+                    <div class="whatwedo">WHAT WE DO</div>
+                     <div >
+                        <img id="pro" src="img/프로그램 일러-1.png">
+                        <img id="pro2" src="img/프로그램 일러.png">
+                        <img class="purpleback" src="img/Ellipse 16.png"></img>
+                    </div>
+                </div>
+                <div class="main1_right">
+                    <div class="program_top_typo" style="margin-top:150px; margin-bottom: 120px;"> <img src ="img/Frame-2.png"> <br> 인공지능 경진대회 </div>
+                    <div class="program_bottom_typo" style=" margin-bottom: 0;">
+                        Face & Speech Recognition 기술을 이용해 <br>
+                        유쾌한 아이디어를 직접 코딩을 통해 구현하는 대회
+                    </div>
+                    <div id = "apply_button"> 지원하기 </div>
+
+                     
+                </div>
+            </div>
+            <div class ="main_2">
+                <div>
+                    <div class="whatwedo">WHAT WE DO</div>
+                    <div class="whatwe_top_typo"style=" margin-bottom: 120px;"> <img src="img/Frame-1.png"> <br> OUTTA에서만 볼 수 있는 책 </div>
+                    <div class="whatwe_bottom_typo"  style=" margin-bottom: 0;">
+                        'Autonomous Cognitive Assistance'를 <br>
+                        python으로 개발하는데 도움되는 교육 자료 <br>
+                    </div>
+                    <div id = "book_button"> 책 보러가기 </div>
+                </div>
+                <div>
+                    <div></div>
+                    <div><img id="book" src="img/책 일러-1.png"> <img id="book2" src="img/책 일러.png"><img class="purpleback" src="img/Ellipse 16.png"></div>
+                </div>
+            </div>
+            <div class ="main_3">
+                <div>
+                    <div class="whatwedo">WHAT WE DO</div>
+                    <div class="program_png"><img id="file" src="img/자료실 일러-1.png"><img id="file2" src="img/자료실 일러.png"><img class="purpleback" src="img/Ellipse 16.png"></div>
+                </div>
+                <div>
+                    <div class="program_top_typo"style="margin-top:150px; margin-bottom: 120px;"> <img src="img/Frame.png"> <br> OUTTA에서만 볼 수 있는 자료실 </div>
+                    <div class="program_bottom_typo" style=" margin-bottom: 0;">
+                        교재 연습 문제 해결에 필요한<br>
+                        데이터셋 파일과 스켈레톤 코드 저장소 <br>
+                    </div>
+                    <div id = "file_button"> 자료실 보러가기</div>
+                </div>
+            </div>
+            <hr style="margin: 55px; border-color: rgb(241, 247, 245);">
+        </main>
+        <footer>
+            <div class="footer_left">
+                <div>
+                    <img src="img/Instagram.png">
+                    <img src="img/LinkedIn.png">
+                    <img src="img/Youtube.png">
+                    <img src="img/Link.png">
+                </div>
+                <div>© OUTTA, Inc. 2022. We love our students!</div>
+                <div style="font-size:12px;">Seoul National University, 599 Gwan-angno, Gwanak-gu, Seoul, 151-742, Korea</div>
+            </div>
+            <div class ="footer_center">
+                OUTTA
+            </div>
+            <ul class="footer_right">
+                <li> BLOG</li>
+                <li> ORGANIATION</li>
+                <li> CONTACT</li>
+                <li style="border:none;"> RESOURCES</li>
+
+            </ul>
+        </footer>
+        <script>
+            $('#apply_button').hover(function() {
+            $(this).css("background-color", "#4558FF");
+            }, function(){
+            $(this).css("background-color", "white");
+            });
+
+            $('#apply_button').hover(function() {
+            $(this).css("color", "white");
+            }, function(){
+            $(this).css("color", "#4558FF");
+            });
+
+            $('#book_button').hover(function() {
+            $(this).css("background-color", "#4558FF");
+            }, function(){
+            $(this).css("background-color", "white");
+            });
+
+            $('#book_button').hover(function() {
+            $(this).css("color", "white");
+            }, function(){
+            $(this).css("color", "#4558FF");
+            });
+
+            $('#file_button').hover(function() {
+            $(this).css("background-color", "#4558FF");
+            }, function(){
+            $(this).css("background-color", "white");
+            });
+
+            $('#file_button').hover(function() {
+            $(this).css("color", "white");
+            }, function(){
+            $(this).css("color", "#4558FF");
+            });
+
+          
+   
+            function fadein(img_src){
+                    $(img_src).fadeIn();
+                }
+            function fadeout(img_src){
+                $(img_src).fadeOut();
+            }
+            
+
+         
+            function fadeinout(mouse_location,old,pop){
+                $(mouse_location).hover(function(){
+                    $(old).fadeOut(200,fadein(pop));
+            },
+                function(){
+                    $(pop).fadeOut(200,fadein(old));
+            }
+            )}
+
+            $(document).ready(fadeinout(".main_1", "#pro","#pro2"))
+            $(document).ready(fadeinout(".main_2", "#book","#book2"))
+            $(document).ready(fadeinout(".main_3", "#file","#file2"))
+
+        </script>
+</body>
+</html>
