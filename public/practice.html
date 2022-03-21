@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>practice</title>
+  </head>
+  <body>
+    <form action="/practice" method="post">
+      검색창 <input type="text" name="search" />
+      <input type="submit" />
+    </form>
+    <button class="search">검색</button>
+  </body>
+  <script>
+    document.querySelector(".search").addEventListener("click", function () {
+      var inputdata = document.forms[0].elements[0].value;
+      sendAjax("/ajax_send_search", inputdata);
+    });
+    function sendAjax(url, data) {
+      var data = { search: data };
+      data = JSON.stringify(data);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(data);
+
+      xhr.addEventListener("load", function () {
+        console.log(xhr.responseText);
+      });
+    }
+  </script>
+</html>

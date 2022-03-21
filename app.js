@@ -40,7 +40,19 @@ app.post('/email_post', function(req, res){
 })
 app.post('/ajax_send_email', function(req, res){
     console.log(req.body.email);
+    var responseData = {'result': 'ok', 'email' : req.body.email}
+    res.json(responseData)
 })
+
+app.post('/practice', function(req, res){
+    res.render('email.ejs', {'result': req.body.search})
+})
+app.post('/ajax_send_search', function(req, res){
+    var responseData = {'result': 'ok', 'search' : req.body.search}
+    res.json(responseData)
+})
+
+
 
 // public 디렉토리를 static으로 기억한다.
 // public 내부의 파일들을 localhost:3000/파일명 으로 브라우저에서 불러올 수 있다.
