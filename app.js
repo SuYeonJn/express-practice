@@ -1,6 +1,18 @@
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
+var mysql = require('mysql')
+
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    port : 3306,
+    user     : 'root',
+    password : '111111',
+    database : 'db'
+  });
+
+  connection.connect();
+
 
 app.listen(3000, function() {
     console.log("start! express server on port 3000")
@@ -39,10 +51,26 @@ app.post('/email_post', function(req, res){
    res.render('email.ejs', {'email': req.body.email})
 })
 app.post('/ajax_send_email', function(req, res){
-    console.log(req.body.email);
-    var responseData = {'result': 'ok', 'email' : req.body.email}
-    res.json(responseData)
-})
+    // console.log(req.body.email);
+    // var responseData = {'result': 'ok', 'email' : req.body.email}
+    var email = req.body.email;
+    var responseData = {};
+    
+    connection.query('SELECT name from user where email="'+ email +'"', function(err, rows) {
+        if (err) throw err;
+        if(rows[0]) {
+            responseData.result = "ok";
+            responseData.name = rows[0].name;
+            //console.log( rows[0].name);
+        } else {
+            responseData.result = "none";
+            responseData.name = "none";
+            //console.log('none : ' + rows[0])
+        }
+        res.json(responseData)
+    });
+    })
+
 
 app.post('/practice', function(req, res){
     res.render('email.ejs', {'result': req.body.search})
