@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
 var index = require('./router/index')
-var email = require('./router/email')
+var login = require('./router/login')
 var join = require('./router/join')
 
 app.listen(3000, function() {
@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine', 'ejs')
 
 app.use('/', index)
-app.use('/email', email)
+app.use('/login', login)
 app.use('/join', join)
 
 
