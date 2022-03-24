@@ -1,3 +1,4 @@
+const { request } = require('express');
 var express = require('express')
 var router = express.Router();
 var mysql = require('mysql')
@@ -14,7 +15,7 @@ var connection = mysql.createConnection({
   connection.connect();
 //router!! 
 router.post('/form', function(req, res){
-    //var email = req.body.email;
+    var email = req.body.email;
    // res.send(`Welcome! ${email}`)
    res.render('email.ejs', {'email': req.body.email})
 })
@@ -23,21 +24,37 @@ router.post('/ajax', function(req, res){
     // console.log(req.body.email);
     // var responseData = {'result': 'ok', 'email' : req.body.email}
     var email = req.body.email;
+    var password = req.body.password;
+    // console.log(req.body);
+    // console.log(email);
+    // console.log(password);
     var responseData = {};
     
-    connection.query('SELECT name from user where email="'+ email +'"', function(err, rows) {
-        if (err) throw err;
+    connection.query('SELECT * from user where email= "' + email +'"', function(err, rows) {
+        if (err) throw err;      
         if(rows[0]) {
+            if(rows[0].pw === password){
+            //console.log(rows[0].pw)
             responseData.result = "ok";
-            responseData.name = rows[0].name;
+            var name = rows[0].name;
+            responseData.name = `Welcome! ${name}`;
             //console.log( rows[0].name);
-        } else {
-            responseData.result = "none";
-            responseData.name = "none";
-            //console.log('none : ' + rows[0])
-        }
-        res.json(responseData)
+            }
+            else {
+                responseData.result = "none";
+                responseData.name = "none";
+                //console.log('none : ' + rows[0])
+            }  
+       
+          } else{
+            responseData.result = "non";
+            responseData.name = "non";
+          }
+          console.log(responseData);      
+          res.json(responseData)
     });
     })
+
+
 
     module.exports = router;
