@@ -3,6 +3,7 @@ var app = express()
 var bodyParser = require('body-parser')
 var index = require('./router/index')
 var email = require('./router/email')
+var join = require('./router/join')
 
 app.listen(3000, function() {
     console.log("start! express server on port 3000")
@@ -15,6 +16,7 @@ app.set('view engine', 'ejs')
 
 app.use('/', index)
 app.use('/email', email)
+app.use('/join', join)
 
 
 app.get('/test', function(req, res){
