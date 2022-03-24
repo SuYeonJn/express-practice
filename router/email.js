@@ -1,6 +1,7 @@
 const { request } = require('express');
 var express = require('express')
 var router = express.Router();
+var path = require('path')
 var mysql = require('mysql')
 
 //database setting
@@ -13,6 +14,11 @@ var connection = mysql.createConnection({
   });
 
   connection.connect();
+
+  router.get('/', function(req,res) {
+    res.sendFile(path.join(__dirname, '../public/form.html'))
+})
+
 //router!! 
 router.post('/form', function(req, res){
     var email = req.body.email;
@@ -30,7 +36,7 @@ router.post('/ajax', function(req, res){
     // console.log(password);
     var responseData = {};
     
-    connection.query('SELECT * from user where email= "' + email +'"', function(err, rows) {
+    connection.query('SELECT * from user where email= ?', [email] , function(err, rows) {
         if (err) throw err;      
         if(rows[0]) {
             if(rows[0].pw === password){
