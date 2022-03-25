@@ -9,6 +9,8 @@ app.listen(3000, function() {
     console.log("start! express server on port 3000")
 })
 
+// public 디렉토리를 static으로 기억한다.
+// public 내부의 파일들을 localhost:3000/파일명 으로 브라우저에서 불러올 수 있다.
 app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
@@ -30,5 +32,4 @@ app.post('/ajax_send_search', function(req, res){
     res.json(responseData)
 })
 
-// public 디렉토리를 static으로 기억한다.
-// public 내부의 파일들을 localhost:3000/파일명 으로 브라우저에서 불러올 수 있다.
+

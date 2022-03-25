@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
   connection.connect();
 
   router.get('/', function(req,res) {
-    res.sendFile(path.join(__dirname, '../public/form.html'))
+    res.sendFile(path.join(__dirname, '../public/login.html'))
 })
 
 //router!! 
@@ -26,7 +26,7 @@ router.post('/form', function(req, res){
    res.render('email.ejs', {'email': req.body.email})
 })
 
-router.post('/ajax', function(req, res){
+router.post('/login', function(req, res){
     // console.log(req.body.email);
     // var responseData = {'result': 'ok', 'email' : req.body.email}
     var email = req.body.email;
