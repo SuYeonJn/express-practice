@@ -12,7 +12,7 @@ var path = require('path')
 })
 */
 router.get('/', function(req,res) {
-    res.sendFile(path.join(__dirname, '../public/mainpage.html'))
+    res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
 router.get('/teampage', function(req,res) {
